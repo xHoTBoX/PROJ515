@@ -1,0 +1,133 @@
+Project Execution Plan
+
+General aims, research question/goals
+
+Task overview
+
+Task breakdown
+
+System overview
+
+System flow diagram
+
+Software overview
+
+Software flow diagram
+
+Gantt chart
+
+Requirements(software/hardware)
+
+Budget
+
+IP
+////////////////////////////////////////////////////////////////////////////////////
+
+Design->Develop->Create->Integrate->Test->Operate
+
+////////////////////////////////////////////////////////////////////////////////////
+
+Design
+
+	Goals(research questions) and objectives
+
+	System Design
+		System requirements
+		Identify subsystems and interfaces
+
+	Hardware/Software design
+		From system requirements
+		Find cost and lead times
+
+	Establish tasks
+
+	Schedule
+
+	Risk assessment and management plan
+
+////////////////////////////////////////////////////////////////////////////////////
+
+Project execution plan
+	Team organisation
+		roles and responsibilities
+	Team management
+		Risks
+	Project plan
+		Milestones and deliverables
+
+////////////////////////////////////////////////////////////////////////////////////
+
+Work breakdown structure
+	Do stuff
+
+////////////////////////////////////////////////////////////////////////////////////
+
+Broad tasks
+	
+	Gripper
+		Find suitable servos
+		Decide on control method
+		Integrate camera
+		Finish cad
+		Print
+		Build
+		Software
+
+	Kinect vision
+		Find cpu/gpu usage
+		Implement yolo
+		Combine yolo with depth map for xyz localisation
+		QR code xyz localisation as a backup
+		
+	Gripper vision
+		Decide on camera
+		Cpu/gpu usage
+		object recognition, yolo?
+		Visual servoing with arm
+		Gripper adapt to object?
+	
+	Localisation
+		Make sure everything still works
+		Look into map loading
+		Fast forward bag files
+
+	Object mapping
+		Look into current co ordinates from slam
+		Look into goal sending
+		Save object locations with map coordinates and labels
+
+	Arm mounting
+		Decide on mounting method for arm
+		Mount arm
+
+	System integration
+		Mount arm
+		Localise and find objects, simultaneously or stop/start?
+		Move arm to object
+		Pass over arm control to gripper camera and home in on object
+		Pick up object
+		Bring home
+
+
+Improve/redo state machine
+implement action server
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Objectives
+	Locate object, pick up object, return object to desired location
+
+Research questions
+	How do we know our current location
+		Slam
+	How do we locate objects
+		Yolo
+		QR codes
+		xyz coordinate from camera feed
+		Save location with tag in array
+	How do we pick up object
+		Gummi arm
+		Move arm close to object using xyz coordinate from kinect
+		Home on in object using in hand camera
+		How do return object to desired location
